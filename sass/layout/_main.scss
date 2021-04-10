@@ -1,0 +1,35 @@
+.main {
+  // min-height: 100vh;
+  grid-row: 2/-1;
+  scroll-behavior: smooth;
+  background-color: gainsboro;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 100vh;
+  grid-template-rows: repeat(auto-fill, minmax(min-content, max-content));
+  overflow-y: scroll;
+  scrollbar-width: none;
+  // flex-direction: column;
+  // margin-top: -25vh;
+  // padding-top: 20rem;
+  // grid-gap: 1rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // &-header {
+  //   // background-color: yellowgreen;
+  //   height: 10vh; /* 100% Full-height */
+  //   border-bottom: 2px solid white;
+  //   display: flex;
+  //   justify-content: center;
+  //   padding: 0.5rem 0;
+  // }
+
+  // &-content {
+  //   // background-color: orangered;
+  //   // height: 90vh; /* 100% Full-height */
+  //   margin-right: 15.5rem;
+  //   // margin-left: 2.5rem;
+  // }
+}
