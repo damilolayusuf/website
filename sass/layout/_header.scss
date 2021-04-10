@@ -40,7 +40,8 @@
     height: 100%;
     position: absolute;
     z-index: -10;
-    opacity: 0.75;
+    filter: brightness(65%);
+    // opacity: 0.75;
   }
 
   &--text {
@@ -58,7 +59,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    opacity: 0.85;
+    // opacity: 0.85;
   }
 }
 
