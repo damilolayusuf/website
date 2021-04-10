@@ -400,9 +400,9 @@ $color-grey-dark-3: #333;
     &:hover &__side--front {
       transform: rotateY(0);
     }
-    // &__details {
-    //   padding: 1rem 3rem;
-    //   margin-top: -1.5rem;
+    &__details {
+      //   padding: 1rem 3rem;
+      //   margin-top: -1.5rem;
     }
 
     &__cta {
