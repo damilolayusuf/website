@@ -1,0 +1,17 @@
+.hyperlink {
+  &:link,
+  &:visited {
+    // background-color: grey;
+    color: grey;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  &:hover,
+  &:active {
+    color: grey;
+    box-shadow: 0 1rem 2rem rgba(black, 0.4);
+    transform: rotate(5deg) scale(1.3);
+  }
+}

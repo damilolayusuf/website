@@ -1,0 +1,29 @@
+.footer {
+  grid-row: 6/7;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, minmax(10rem, min-content));
+  grid-template-areas: "logo logo";
+  align-items: start;
+  background-color: grey;
+  @media only screen and (max-width: 37.5em), only screen and (hover: none) {
+    grid-column: col-start / -1;
+    background-color: grey;
+  }
+
+  &__logo-box {
+    grid-area: logo;
+    text-align: center;
+  }
+
+  &_logo {
+    &-image {
+      width: 25%;
+      @media only screen and (max-width: 37.5em),
+        only screen and (hover: none) {
+        width: 100%;
+      }
+    }
+  }
+}
