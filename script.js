@@ -3,7 +3,31 @@
 window.onload = function () {
   const headerText = document.querySelector(".header--text");
   headerText.classList.add("header-text-animation");
+  mobileHeader(x); // Call listener function at run time
 };
+
+const markupVideo = `<video class="header-video__content" autoplay muted loop>
+<source src="img/header-video-2.mp4" type="video/mp4" />
+ <source src="img/video.webm" type="video/webm" /> 
+Your browser is not supported!
+</video>`;
+const markupImage = ` <div class="header--image"></div>`;
+const header = document.querySelector(".header");
+const headerContent = document.querySelector(".header--content");
+
+const x = window.matchMedia("(max-width: 37.5em)");
+const mobileHeader = function (x) {
+  if (x.matches) {
+    // If media query matches
+    headerContent.innerHTML = "";
+    headerContent.insertAdjacentHTML("afterbegin", markupImage);
+  } else {
+    headerContent.innerHTML = "";
+    headerContent.insertAdjacentHTML("afterbegin", markupVideo);
+  }
+};
+
+x.addEventListener("change", mobileHeader);
 
 const begin = document.querySelector(".btn-begin");
 const sideNav = document.querySelector(".side-nav");
@@ -16,7 +40,6 @@ begin.addEventListener("click", function () {
 
 // btnClose.addEventListener("click", function () {});
 
-const header = document.querySelector(".header");
 const introductionHeight = introduction.getBoundingClientRect().height;
 
 // sideNav.addEventListener("click", function (e) {
